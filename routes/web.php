@@ -29,3 +29,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'HomeController@logout');
 Route::resource('/expense_reports', 'ExpenseReportController');
+Route::get('/expense_reports/{id}/confirmDelete', 'ExpenseReportController@confirmDelete');
