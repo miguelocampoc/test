@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\ExpenseReport;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::resource('/test', 'ExpenseReportController');
+Route::get('/test2', function(Request $request){
+    $test = DB::table('expense_reports')->get()->first();
+    echo json_encode($test);
+
+});
+

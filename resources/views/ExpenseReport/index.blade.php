@@ -4,7 +4,7 @@
 @foreach($expenseReports as $expenseReport)
 <tr>
     <td>
-        {{$expenseReport->title}}
+       <a href="/expense_reports/{{$expenseReport->id}}"> {{$expenseReport->title}}</a>
     </td>
     <td>
         <a href="/expense_reports/{{$expenseReport->id}}/edit" >Editar</a>
